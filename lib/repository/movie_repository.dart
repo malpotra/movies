@@ -47,7 +47,7 @@ class MovieRepository {
 
     final url = Uri.parse('https://api.themoviedb.org/3/trending/movie/day?language=${language}&page=${page}');
     int retry = 0;
-    while (retry <= 3) {
+    while (retry <= 8) {
       try {
         final response = await http.get(
           url,
@@ -67,7 +67,7 @@ class MovieRepository {
         return List.empty();
       } catch (e) {
         print(e);
-        if (retry <= 3) {
+        if (retry <= 8) {
           retry++;
           await Future.delayed(Duration(seconds: 1));
         } else {
@@ -81,7 +81,7 @@ class MovieRepository {
   Future<List<dynamic>> fetchMoviesPlayingInTheaters(String region, int page) async {
     final url = Uri.parse('https://api.themoviedb.org/3/movie/now_playing?region=${region}&page=${page}');
     int retry = 0;
-    while (retry <= 5) {
+    while (retry <= 8) {
       try {
         final response = await http.get(
           url,
@@ -101,7 +101,7 @@ class MovieRepository {
         return List.empty();
       } catch (e) {
         print(e);
-        if (retry <= 3) {
+        if (retry <= 8) {
           retry++;
           await Future.delayed(Duration(seconds: 1));
         } else {
