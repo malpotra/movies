@@ -1,0 +1,51 @@
+page
+integer
+Defaults to 0
+
+results
+array of objects
+object
+adult
+boolean
+Defaults to true
+backdrop_path
+string
+id
+integer
+Defaults to 0
+title
+string
+original_language
+string
+original_title
+string
+overview
+string
+poster_path
+string
+media_type
+string
+genre_ids
+array of integers
+popularity
+number
+Defaults to 0
+release_date
+string
+video
+boolean
+Defaults to true
+vote_average
+number
+Defaults to 0
+vote_count
+integer
+Defaults to 0
+
+total_pages
+integer
+Defaults to 0
+
+total_results
+integer
+Defaults to 0
